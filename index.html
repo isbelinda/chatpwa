@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chat By Belinda</title>
+        <link rel="manifest" href="/manifest.json">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Chat PWA">
+        <meta name="msapplication-TileColor" content="#3273dc">
+    </head>
+    <body ng-app="chatPWAApp">
+    <section class="hero is-info is-large">
+        <!-- Hero header: will stick at the top -->
+        <div class="hero-head">
+            <header class="nav">
+                <div class="container">
+                    <span class="nav-toggle" ng-click="logout()" ng-show="getInfo">
+                      <i class="fa fa-angle-left button-back" aria-hidden="true"></i>
+                    </span>
+                    <div class="nav-left">
+                        <a charset="nav-item"></a>
+                        <a class="nav-item">
+                            {{businessName}}
+                        </a>
+                    </div>
+
+                    <!--<div class="nav-right nav-menu">-->
+                        <!--<a class="nav-item is-active">-->
+                            <!--Home-->
+                        <!--</a>-->
+                        <!--<a class="nav-item">-->
+                            <!--Examples-->
+                        <!--</a>-->
+                        <!--<a class="nav-item">-->
+                            <!--Documentation-->
+                        <!--</a>-->
+
+                    <!--</div>-->
+                </div>
+            </header>
+        </div>
+    </section>
+    <div class="container height-container">
+        <ui-view></ui-view>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.2.0/angularfire.min.js"></script>
+    <script src="https://unpkg.com/angular-ui-router@0.3.2/release/angular-ui-router.min.js"></script>
+
+    <script src="https://fir-webchat-31ebc.firebaseapp.com/bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <script src="scripts/appController.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/app.js" async></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<div class="container is-fluid">
+    <div class="notification">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column text-center">
+                <label class="label">Name</label>
+                <p class="control">
+                    <input class="input" type="text" placeholder="Name" ng-model="data.username">
+                </p>
+                <label class="label">Subject</label>
+                <p class="control">
+          <span class="select">
+            <select ng-model="data.businessId">
+                <option value="">Select Hotel</option>
+                <option value="SumonHotel">Sumon Hotel</option>
+                <option value="NWHotel">NW Hotel</option>
+                <option value="Socket9Hotel">Socket9 Hotel</option>
+            </select>
+          </span>
+                </p>
+                <button class="button is-primary" ng-click="send(data)">Go to chat</button>
+            </div>
+            <div class="column"></div>
+        </div>
+
+    </div>
+</div>
+
